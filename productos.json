@@ -1,0 +1,8 @@
+[
+    { "id": 1, "nombre": "Escritorio", "precio": 10000, "imagen": "./img/escritorio.jpg" },
+    { "id": 2, "nombre": "Laptop", "precio": 350000, "imagen": "./img/laptop.jpg" },
+    { "id": 3, "nombre": "Monitor", "precio": 150000, "imagen": "./img/monitor.jpg" },
+    { "id": 4, "nombre": "Mouse", "precio": 10000, "imagen": "./img/mouse.jpg" },
+    { "id": 5, "nombre": "Silla", "precio": 250000, "imagen": "./img/silla.jpg" },
+    { "id": 6, "nombre": "Teclado", "precio": 250000, "imagen": "./img/teclado.jpg" }
+]

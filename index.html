@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Compra Completo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <h1>Bienvenido a Tecno</h1>
+        </div>
+    </header>
+
+    <div id="formContainer">
+        <!-- Formulario de Registro -->
+        <div id="registro" class="formulario">
+            <h2>Registro</h2>
+            <input type="text" id="nombreRegistro" placeholder="Nombre de usuario" required>
+            <input type="password" id="passwordRegistro" placeholder="Contraseña" required>
+            <button id="btnRegistrar">Registrarse</button>
+            <p>¿Ya tienes cuenta? <a href="#" id="linkLogin">Iniciar sesión</a></p>
+        </div>
+
+        <!-- Formulario de Login -->
+        <div id="login" class="formulario" style="display: none;">
+            <h2>Iniciar Sesión</h2>
+            <input type="text" id="nombreLogin" placeholder="Nombre de usuario" required>
+            <input type="password" id="passwordLogin" placeholder="Contraseña" required>
+            <button id="btnLogin">Iniciar Sesión</button>
+            <p>¿No tienes cuenta? <a href="#" id="linkRegistro">Registrarse</a></p>
+        </div>
+    </div>
+
+    <div id="productos" style="display: none;"></div>
+
+    <!-- Modal para el carrito -->
+    <div id="modalCarrito" class="modal oculto">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <ul id="listaCarrito"></ul>
+            <p>Total: $<span id="totalCarrito">0</span></p>
+            <button id="btnPagar">Pagar</button>
+        </div>
+    </div>
+
+    <button id="iconoCarrito" onclick="mostrarModal()" style="display: none;">
+        🛒 <span id="cantidadProductos">0</span>
+    </button>
+
+    <div id="modalPago" class="modal oculto">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModalPago()">&times;</span>
+            <h2>Forma de Pago</h2>
+            <label>
+                <input type="radio" name="pago" value="efectivo" checked> Efectivo
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="pago" value="tarjeta"> Tarjeta
+            </label>
+            <br>
+            <div id="infoTarjeta" style="display: none;">
+                <input type="text" id="numeroTarjeta" placeholder="Número de tarjeta" required>
+                <input type="text" id="nombreTitular" placeholder="Nombre del titular" required>
+            </div>
+            <button id="btnConfirmarPago">Confirmar Pago</button>
+        </div>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
